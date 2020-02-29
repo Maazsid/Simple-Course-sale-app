@@ -1,23 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Coursesales from "./Coursesales";
 
 function App() {
+
+  var courses = [
+    { name : 'Complete iOS10 dev course', price : 199},
+    { name : 'Complete pentesting course', price : 299},
+    { name : 'Complete front end dev course', price : 180},
+    { name : 'Bug Bounty and web app pentesting', price : 190}
+  ]
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Welcome to Course Purchase Page
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Coursesales items = {courses} />
       </header>
     </div>
   );
